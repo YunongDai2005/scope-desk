@@ -1,0 +1,161 @@
+{
+  "source_sha256": "fd3c91a541b206e5a9565da99967d40502e2177c15d3bea9d39d270722486546",
+  "scope": "Three synthetic DEVELOPMENT probes, not held-out accuracy or real customers",
+  "probes": [
+    {
+      "case": 1,
+      "synthetic_message": "Please add online payments and a French version.",
+      "scopes": [
+        "One English landing page with a contact form"
+      ],
+      "expected": "extra",
+      "actual_assessments": [
+        "extra",
+        "extra"
+      ],
+      "all_items_match_development_expectation": true,
+      "analysis": {
+        "items": [
+          {
+            "request_quote": "add online payments",
+            "scope_id": null,
+            "assessment": "extra",
+            "explanation": "The agreed scope includes one English landing page with a contact form but does not mention payment functionality, so adding online payments requires additional work beyond the original agreement."
+          },
+          {
+            "request_quote": "a French version",
+            "scope_id": null,
+            "assessment": "extra",
+            "explanation": "The agreed scope specifies one English landing page only; creating a French version involves translation and potentially separate content, which is not covered by the original scope and thus constitutes extra work."
+          }
+        ]
+      },
+      "model_evidence": {
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "usage": {
+          "completion_tokens": 130,
+          "prompt_tokens": 315,
+          "total_tokens": 445,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 315
+        },
+        "finish_reason": "stop"
+      },
+      "state_before_review": "REVIEW",
+      "actual_restart_and_replay": {
+        "first_replay": false,
+        "second_replay": true,
+        "receipt_count": 1
+      }
+    },
+    {
+      "case": 2,
+      "synthetic_message": "Please revise the third blog post.",
+      "scopes": [
+        "Three monthly blog posts",
+        "One revision per post"
+      ],
+      "expected": "included",
+      "actual_assessments": [
+        "included"
+      ],
+      "all_items_match_development_expectation": true,
+      "analysis": {
+        "items": [
+          {
+            "request_quote": "Please revise the third blog post.",
+            "scope_id": "scope-2",
+            "assessment": "included",
+            "explanation": "The agreed scope includes one revision per post (scope-2), which applies to any of the three monthly blog posts including the third."
+          }
+        ]
+      },
+      "model_evidence": {
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "usage": {
+          "completion_tokens": 70,
+          "prompt_tokens": 327,
+          "total_tokens": 397,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 327
+        },
+        "finish_reason": "stop"
+      },
+      "state_before_review": "REVIEW"
+    },
+    {
+      "case": 3,
+      "synthetic_message": "Can you improve it?",
+      "scopes": [
+        "One English landing page with a contact form"
+      ],
+      "expected": "clarify",
+      "actual_assessments": [
+        "clarify"
+      ],
+      "all_items_match_development_expectation": true,
+      "analysis": {
+        "items": [
+          {
+            "request_quote": "Can you improve it?",
+            "scope_id": null,
+            "assessment": "clarify",
+            "explanation": "The phrase 'improve it' lacks specificity regarding what aspects of the landing page should be improved (e.g., design, content, functionality). The agreed scope defines only one English landing page with a contact form but does not detail quality standards, performance metrics, or enhancement criteria, so it is unclear whether the request falls within the original agreement."
+          }
+        ]
+      },
+      "model_evidence": {
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "usage": {
+          "completion_tokens": 106,
+          "prompt_tokens": 311,
+          "total_tokens": 417,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 311
+        },
+        "finish_reason": "stop"
+      },
+      "state_before_review": "REVIEW"
+    }
+  ],
+  "note": "Actual synthetic development calls before the deterministic export feature was added. Never a held-out accuracy estimate. No customers, credentials or provider reasoning included.",
+  "current_source_sha256": "6709cd93fff1b8085742abc6dff1aed1f32aa066864eb80ad35ef1a0b1b8ce92",
+  "offline_tests": 8,
+  "additional_calls_after_export": 0
+}

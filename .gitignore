@@ -1,0 +1,5 @@
+*.sqlite
+*.sqlite-*
+*.env
+__pycache__/
+private-evidence/
